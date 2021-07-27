@@ -3,6 +3,24 @@
   <div *ngFor="let trai of traiCayList; let i = index">
     <li>{{ i + 1 }}.{{ trai }}</li>
   </div>
-
+  <br />
+  <table class="table">
+    <tr>
+      <th>Thứ tự</th>
+      <th>Tên trái cây</th>
+      <th>Giá bán</th>
+      <th>Đang hạ giá</th>
+    </tr>
+    <tr *ngFor="let trai of traiCayList2; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ trai.ten }}</td>
+      <td class="right">
+        <span [ngClass]="{ 'so-am': trai.gia < 0 }" >{{ trai.gia }}</span>
+      </td>
+      <td>
+        <span *ngIf="trai.haGia">Đang hạ giá</span>
+      </td>
+    </tr>
+  </table>
 
 </div>

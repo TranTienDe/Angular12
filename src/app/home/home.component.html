@@ -2,11 +2,6 @@
   <h3>Đây là component Home</h3>
   <h2>Chào bạn {{ name }}</h2>
   <br/>
-  <input value="name"/>
-  <br/>
-  <input value="{{ name }}"/>
-  <br/>
-  <input [value]="name" title="Đây là {{ name }}"/>
-  <br/>
-  <input [value]="name" [title]="'Đây là ' + name"/>
+  <h2 *ngIf="age > 18">Bạn già rồi!</h2>
+  <h2 *ngIf="age<=18">Bạn còn trẻ!</h2>
 </div>

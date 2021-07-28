@@ -1,4 +1,13 @@
-<p>about works!</p>
+<p appHighLight>about works!</p>
+<p [appHighLight]="myColor" defaultColor="yellow" >about works!</p>
+
+<div>
+  <input type="radio" name="colors" (click)="myColor='green'">Green
+  <input type="radio" name="colors" (click)="myColor='yellow'">Yellow
+  <input type="radio" name="colors" (click)="myColor='cyan'">Cyan
+</div>
+<p >Highlight me!</p>
+
 <ul [ngSwitch]="loginName">
   <li *ngSwitchCase="'user'">
     <p>User is logged in.</p>

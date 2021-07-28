@@ -16,12 +16,44 @@ export class HomeComponent implements OnInit {
     { ten: 'Cam', gia: 42.02, haGia: true }
   ];
 
+  public districts: string[] = [];
+  public vietnamData = [
+    { city: 'Chọn thành phố', district: [] },
+    {
+      city: 'An Giang', district: [
+        'Thành phố Long Xuyên',
+        'Thành phố Châu Đốc',
+        'Thị xã Tân Châu'
+      ]
+    },
+    {
+      city: 'Bà Rịa - Vũng tàu',
+      district: [
+        'Thành phố vũng tàu',
+        'Thị xã Bà Rịa'
+      ]
+    }
+  ];
+
   constructor() { }
 
   public ngOnInit(): void {
     console.log('Trái cây = ', this.traiCayList);
   }
 
+  public onChange(event: any): void {
+    const city = event.target.value;
+    console.log('event: ', city);
 
+    //Cách 1
+    // const searchItem = this.vietnamData.filter(item => item.city === city);
+    // if(searchItem){
+    //   this.districts = searchItem[0].district;
+    // }
+
+    //cách 2
+    this.districts = this.vietnamData.find(item => item.city === city)?.district || [];
+
+  }
 
 }

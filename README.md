@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+#3024 - Angular 12 - Http POST method - Observable - Json Server giả. Trao đổi giữa client và server
+https://www.youtube.com/watch?v=M3_p6hbr_cI
